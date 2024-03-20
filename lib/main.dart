@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:my_task/view/movie_list_screen/movie_list_screen.dart';
+import 'package:my_task/view/movie_list_screen/cat_list_screen.dart';
 
-import 'view/movie_detail_screen/bloc/movie_detail_cubit.dart';
-import 'view/movie_list_screen/bloc/movie_list_cubit.dart';
+import 'view/movie_detail_screen/bloc/cat_detail_cubit.dart';
+import 'view/movie_list_screen/bloc/cat_list_cubit.dart';
 
 void main() {
   runApp(  MultiBlocProvider(
     providers: [
-      BlocProvider<MovieListCubit>(
-        create: (BuildContext context) => MovieListCubit(),
+      BlocProvider<CatListCubit>(
+        create: (BuildContext context) => CatListCubit(),
       ),
-      BlocProvider<MovieDetailCubit>(
-        create: (BuildContext context) => MovieDetailCubit(),
+      BlocProvider<CatDetailCubit>(
+        create: (BuildContext context) => CatDetailCubit(),
       ),
     ],
     child: const MyApp(),
@@ -41,7 +41,7 @@ class MovieApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: MovieListScreen(),
+      home: CatListScreen(),
     );
   }
 }

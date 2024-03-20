@@ -3,11 +3,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:my_task/model/cat_model.dart';
 
-class MovieCard extends StatelessWidget {
-  final DataModel dataModel;
+class CatCard extends StatelessWidget {
+  final CateDataModel dataModel;
   final String image;
 
-  const MovieCard({super.key, required this.dataModel, required this.image});
+  const CatCard({super.key, required this.dataModel, required this.image});
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +25,7 @@ class MovieCard extends StatelessWidget {
               topRight: Radius.circular(15),
             ),
             child: CachedNetworkImage(
-                imageUrl: image,
+                imageUrl: "https://cdn2.thecatapi.com/images/${dataModel.referenceImageId}.jpg",
                 fit: BoxFit.cover,
                 height: 200,
                 placeholder: (context, url) {
@@ -49,7 +49,7 @@ class MovieCard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Text(
-                  dataModel.name,
+                  dataModel.name ?? "",
                   style: const TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
@@ -57,7 +57,7 @@ class MovieCard extends StatelessWidget {
                 ),
                 const SizedBox(height: 5),
                 Text(
-                  dataModel.description,
+                  dataModel.description ?? "",
                   style: const TextStyle(
                     fontSize: 16,
                   ),

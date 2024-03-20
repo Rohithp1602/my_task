@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'movie_detail_cubit.dart';
+part of 'cat_detail_cubit.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -53,12 +53,12 @@ mixin _$MovieDetailState {
 /// @nodoc
 abstract class $MovieDetailStateCopyWith<$Res> {
   factory $MovieDetailStateCopyWith(
-          MovieDetailState value, $Res Function(MovieDetailState) then) =
-      _$MovieDetailStateCopyWithImpl<$Res, MovieDetailState>;
+          CatDetailState value, $Res Function(CatDetailState) then) =
+      _$MovieDetailStateCopyWithImpl<$Res, CatDetailState>;
 }
 
 /// @nodoc
-class _$MovieDetailStateCopyWithImpl<$Res, $Val extends MovieDetailState>
+class _$MovieDetailStateCopyWithImpl<$Res, $Val extends CatDetailState>
     implements $MovieDetailStateCopyWith<$Res> {
   _$MovieDetailStateCopyWithImpl(this._value, this._then);
 
@@ -160,6 +160,6 @@ class _$InitialImpl implements _Initial {
   }
 }
 
-abstract class _Initial implements MovieDetailState {
+abstract class _Initial implements CatDetailState {
   const factory _Initial() = _$InitialImpl;
 }

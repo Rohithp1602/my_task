@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'movie_list_cubit.dart';
+part of 'cat_list_cubit.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -16,22 +16,22 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$MovieListState {
-  List<DataModel>? get dataList => throw _privateConstructorUsedError;
+  List<CateDataModel>? get dataList => throw _privateConstructorUsedError;
   bool get isLoading => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(List<DataModel>? dataList, bool isLoading)
+    required TResult Function(List<CateDataModel>? dataList, bool isLoading)
         initial,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(List<DataModel>? dataList, bool isLoading)? initial,
+    TResult? Function(List<CateDataModel>? dataList, bool isLoading)? initial,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(List<DataModel>? dataList, bool isLoading)? initial,
+    TResult Function(List<CateDataModel>? dataList, bool isLoading)? initial,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -53,21 +53,21 @@ mixin _$MovieListState {
       throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $MovieListStateCopyWith<MovieListState> get copyWith =>
+  $MovieListStateCopyWith<CatListState> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $MovieListStateCopyWith<$Res> {
   factory $MovieListStateCopyWith(
-          MovieListState value, $Res Function(MovieListState) then) =
-      _$MovieListStateCopyWithImpl<$Res, MovieListState>;
+          CatListState value, $Res Function(CatListState) then) =
+      _$MovieListStateCopyWithImpl<$Res, CatListState>;
   @useResult
-  $Res call({List<DataModel>? dataList, bool isLoading});
+  $Res call({List<CateDataModel>? dataList, bool isLoading});
 }
 
 /// @nodoc
-class _$MovieListStateCopyWithImpl<$Res, $Val extends MovieListState>
+class _$MovieListStateCopyWithImpl<$Res, $Val extends CatListState>
     implements $MovieListStateCopyWith<$Res> {
   _$MovieListStateCopyWithImpl(this._value, this._then);
 
@@ -86,7 +86,7 @@ class _$MovieListStateCopyWithImpl<$Res, $Val extends MovieListState>
       dataList: freezed == dataList
           ? _value.dataList
           : dataList // ignore: cast_nullable_to_non_nullable
-              as List<DataModel>?,
+              as List<CateDataModel>?,
       isLoading: null == isLoading
           ? _value.isLoading
           : isLoading // ignore: cast_nullable_to_non_nullable
@@ -103,7 +103,7 @@ abstract class _$$InitialImplCopyWith<$Res>
       __$$InitialImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({List<DataModel>? dataList, bool isLoading});
+  $Res call({List<CateDataModel>? dataList, bool isLoading});
 }
 
 /// @nodoc
@@ -124,7 +124,7 @@ class __$$InitialImplCopyWithImpl<$Res>
       dataList: freezed == dataList
           ? _value._dataList
           : dataList // ignore: cast_nullable_to_non_nullable
-              as List<DataModel>?,
+              as List<CateDataModel>?,
       isLoading: null == isLoading
           ? _value.isLoading
           : isLoading // ignore: cast_nullable_to_non_nullable
@@ -136,12 +136,12 @@ class __$$InitialImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$InitialImpl implements _Initial {
-  const _$InitialImpl({final List<DataModel>? dataList, this.isLoading = false})
+  const _$InitialImpl({final List<CateDataModel>? dataList, this.isLoading = false})
       : _dataList = dataList;
 
-  final List<DataModel>? _dataList;
+  final List<CateDataModel>? _dataList;
   @override
-  List<DataModel>? get dataList {
+  List<CateDataModel>? get dataList {
     final value = _dataList;
     if (value == null) return null;
     if (_dataList is EqualUnmodifiableListView) return _dataList;
@@ -181,7 +181,7 @@ class _$InitialImpl implements _Initial {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(List<DataModel>? dataList, bool isLoading)
+    required TResult Function(List<CateDataModel>? dataList, bool isLoading)
         initial,
   }) {
     return initial(dataList, isLoading);
@@ -190,7 +190,7 @@ class _$InitialImpl implements _Initial {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(List<DataModel>? dataList, bool isLoading)? initial,
+    TResult? Function(List<CateDataModel>? dataList, bool isLoading)? initial,
   }) {
     return initial?.call(dataList, isLoading);
   }
@@ -198,7 +198,7 @@ class _$InitialImpl implements _Initial {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(List<DataModel>? dataList, bool isLoading)? initial,
+    TResult Function(List<CateDataModel>? dataList, bool isLoading)? initial,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -236,12 +236,12 @@ class _$InitialImpl implements _Initial {
   }
 }
 
-abstract class _Initial implements MovieListState {
+abstract class _Initial implements CatListState {
   const factory _Initial(
-      {final List<DataModel>? dataList, final bool isLoading}) = _$InitialImpl;
+      {final List<CateDataModel>? dataList, final bool isLoading}) = _$InitialImpl;
 
   @override
-  List<DataModel>? get dataList;
+  List<CateDataModel>? get dataList;
   @override
   bool get isLoading;
   @override

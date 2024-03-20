@@ -1,34 +1,34 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:my_task/model/cat_model.dart';
-import 'package:my_task/view/movie_list_screen/bloc/movie_list_cubit.dart';
-import 'package:my_task/widgets/movie_card.dart';
+import 'package:my_task/view/movie_list_screen/bloc/cat_list_cubit.dart';
+import 'package:my_task/widgets/cat_card.dart';
 
-import '../movie_detail_screen/movie_detail_screen.dart';
+import '../movie_detail_screen/cat_detail_screen.dart';
 
-class MovieListScreen extends StatefulWidget {
-  const MovieListScreen({super.key});
+class CatListScreen extends StatefulWidget {
+  const CatListScreen({super.key});
 
   @override
-  State<MovieListScreen> createState() => _MovieListScreenState();
+  State<CatListScreen> createState() => _CatListScreenState();
 }
 
-class _MovieListScreenState extends State<MovieListScreen> {
+class _CatListScreenState extends State<CatListScreen> {
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
-    context.read<MovieListCubit>().getDataFromApi().then((value) {
-      List<DataModel> dataList = value;
-      context.read<MovieListCubit>().getListData(dataList);
+    context.read<CatListCubit>().getDataFromApi().then((value) {
+      List<CateDataModel> dataList = value;
+      context.read<CatListCubit>().getListData(dataList);
     });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Movie')),
-      body: BlocBuilder<MovieListCubit, MovieListState>(
+      appBar: AppBar(title: const Text('Cat List')),
+      body: BlocBuilder<CatListCubit, CatListState>(
         builder: (BuildContext context, state) {
           return Stack(
             children: [
@@ -42,13 +42,13 @@ class _MovieListScreenState extends State<MovieListScreen> {
                           onTap: () {
                             Navigator.push(context, MaterialPageRoute(
                               builder: (context) {
-                                return MovieDetailScreen(
+                                return CatDetailScreen(
                                   dataModel: state.dataList![index],
                                 );
                               },
                             ));
                           },
-                          child: MovieCard(
+                          child: CatCard(
                             image:
                                 'https://image.tmdb.org/t/p/w500/9gk7adHYeDvHkCSEqAvQNLV5Uge.jpg',
                             dataModel: state.dataList![index],

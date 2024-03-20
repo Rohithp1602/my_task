@@ -6,14 +6,14 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:http/http.dart' as http;
 import '../../../model/cat_model.dart';
 
-part 'movie_list_state.dart';
+part 'cat_list_state.dart';
 
-part 'movie_list_cubit.freezed.dart';
+part 'cat_list_cubit.freezed.dart';
 
-class MovieListCubit extends Cubit<MovieListState> {
-  MovieListCubit() : super(const MovieListState.initial());
+class CatListCubit extends Cubit<CatListState> {
+  CatListCubit() : super(const CatListState.initial());
 
-  Future<List<DataModel>> getDataFromApi() async {
+  Future<List<CateDataModel>> getDataFromApi() async {
     emit(state.copyWith(isLoading: true));
 
     final response = await http
@@ -21,14 +21,14 @@ class MovieListCubit extends Cubit<MovieListState> {
     if (response.statusCode == 200) {
       final List<dynamic> responseData = jsonDecode(response.body);
       emit(state.copyWith(isLoading: false));
-      return responseData.map((json) => DataModel.fromJson(json)).toList();
+      return responseData.map((json) => CateDataModel.fromJson(json)).toList();
     } else {
       emit(state.copyWith(isLoading: false));
       throw Exception('Failed to load data.');
     }
   }
 
-  void getListData(List<DataModel> dataList) {
+  void getListData(List<CateDataModel> dataList) {
     emit(state.copyWith(dataList: dataList));
   }
 }
